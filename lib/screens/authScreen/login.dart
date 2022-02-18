@@ -7,6 +7,7 @@ import 'package:sportconnectapp/model/interest.dart';
 import 'package:sportconnectapp/screens/authScreen/forgot_password.dart';
 import 'package:sportconnectapp/screens/authScreen/signup.dart';
 import 'package:sportconnectapp/screens/authScreen/verify_phone_num.dart';
+import 'package:sportconnectapp/screens/home.dart';
 import 'package:sportconnectapp/screens/interest.dart';
 
 import 'package:sportconnectapp/widgets/input.dart';
@@ -112,13 +113,12 @@ class _SignInScreenState extends State<SignInScreen> {
                       child: CustomButton(
                     text: "Sign In With Phone Number",
                     onPress: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => VerifyPhoneNumberScreen(
-                                  phone: phoneNumberController.text,
-                                )),
-                      );
+                      if (firebaseUser != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      }
                     },
                   ))
                 ],
