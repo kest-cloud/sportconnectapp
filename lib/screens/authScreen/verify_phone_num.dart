@@ -50,7 +50,7 @@ class _VerifyPhoneNumberScreenState extends State<VerifyPhoneNumberScreen> {
                 color: theme.cardColor,
                 child: Column(
                   children: [
-                    Text("Verify +234  ${widget.phone}"),
+                    Text("Verify +234 ${widget.phone}"),
                     SizedBox(height: 10),
                     Padding(
                       padding: const EdgeInsets.all(30.0),

@@ -11,7 +11,10 @@ Project Title:  Sport Connect App
 Project Description: This is a mobile application that helps users connect woth other users who love the particular sport they like.
 
 The Users jave the choice to sign up woth their email and password or with just phone number.
-For testing sake.
+For testing sake, to sign in use, or register with phone number 
+    09076836529 - phonenumber, 
+    111111 - password
+    
 
 The Bottom Navigation bar consist of Profile of user, Budduies, Discover, Settings/Privacy as requested. 
 Time didnt permit me to complete all features. 

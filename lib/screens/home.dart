@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               _HomeHeading(),
               _HomeHeroImage(),
+              Text('Choose Favourite Sport'),
               CategoryList(),
             ],
           ),

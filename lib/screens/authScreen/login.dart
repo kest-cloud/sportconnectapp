@@ -116,7 +116,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => VerifyPhoneNumberScreen(
-                                  phone: phoneeNumController.text,
+                                  phone: phoneNumberController.text,
                                 )),
                       );
                     },
