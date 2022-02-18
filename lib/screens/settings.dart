@@ -26,103 +26,97 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return (AppLayout(
         showBottomNav: true,
         currentIndex: 4,
-        child: Column(
-          children: [
-            Container(
-                height: getResponsiveHeight(context: context, height: 100),
-                padding: EdgeInsets.all(20),
-                color: theme.cardColor,
-                child: Column(
-                  children: [
-                    SizedBox(
-                        height:
-                            getResponsiveHeight(context: context, height: 30)),
-                    Text('Update Profile Here'),
-                    SizedBox(height: 10),
-                    Text('Change Password'),
-                    CustomInput(
-                      textt: TextInputType.phone,
-                      controller: updatePasswordController,
-                      text: "New Password",
-                      icon: Icons.lock,
-                      secure: false,
-                    ),
-                    SizedBox(height: 10),
-                    Container(
-                      margin: EdgeInsets.only(
-                          bottom:
-                              getResponsiveHeight(context: context, height: 3)),
-                      child: Row(
-                        children: [
-                          Expanded(
-                              child: CustomButton(
-                            text: "Update Password",
-                            onPress: () {},
-                          ))
-                        ],
-                      ),
-                    ),
-                    // SizedBox(height: 10),
-                    // Row(
-                    //   children: [
-                    //     Text('Update Email'),
-                    //     CustomInput(
-                    //       textt: TextInputType.emailAddress,
-                    //       controller: updateEmailController,
-                    //       text: "New Email",
-                    //       icon: Icons.lock,
-                    //       secure: false,
-                    //     ),
-                    //   ],
-                    // ),
-                    // SizedBox(height: 10),
-                    // Container(
-                    //   margin: EdgeInsets.only(
-                    //       bottom:
-                    //           getResponsiveHeight(context: context, height: 3)),
-                    //   child: Row(
-                    //     children: [
-                    //       Expanded(
-                    //           child: CustomButton(
-                    //         text: "Update Email",
-                    //         onPress: () {},
-                    //       ))
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(height: 10),
-                    // Row(
-                    //   children: [
-                    //     Text('Update Email'),
-                    //     CustomInput(
-                    //       textt: TextInputType.emailAddress,
-                    //       controller: updateUsernameController,
-                    //       text: "New Username",
-                    //       icon: Icons.lock,
-                    //       secure: false,
-                    //     ),
-                    //   ],
-                    // ),
-                    // SizedBox(height: 10),
-                    // Container(
-                    //   margin: EdgeInsets.only(
-                    //       bottom:
-                    //           getResponsiveHeight(context: context, height: 3)),
-                    //   child: Row(
-                    //     children: [
-                    //       Expanded(
-                    //           child: CustomButton(
-                    //         text: "Update Username",
-                    //         onPress: () {},
-                    //       ))
-                    //     ],
-                    //   ),
-                    // ),
-                    SizedBox(height: 10),
-                    Text('Log out'),
-                  ],
-                )),
-          ],
-        )));
+        child: Container(
+            height: getResponsiveHeight(context: context, height: 100),
+            padding: EdgeInsets.all(20),
+            color: theme.cardColor,
+            child: Column(
+              children: [
+                SizedBox(
+                    height: getResponsiveHeight(context: context, height: 30)),
+                Text('Update Profile Here'),
+                SizedBox(height: 10),
+                Text('Change Password'),
+                CustomInput(
+                  textt: TextInputType.phone,
+                  controller: updatePasswordController,
+                  text: "New Password",
+                  icon: Icons.lock,
+                  secure: false,
+                ),
+                SizedBox(height: 10),
+                Container(
+                  margin: EdgeInsets.only(
+                      bottom: getResponsiveHeight(context: context, height: 3)),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: CustomButton(
+                        text: "Update Password",
+                        onPress: () {},
+                      ))
+                    ],
+                  ),
+                ),
+                // SizedBox(height: 10),
+                // Row(
+                //   children: [
+                //     Text('Update Email'),
+                //     CustomInput(
+                //       textt: TextInputType.emailAddress,
+                //       controller: updateEmailController,
+                //       text: "New Email",
+                //       icon: Icons.lock,
+                //       secure: false,
+                //     ),
+                //   ],
+                // ),
+                // SizedBox(height: 10),
+                // Container(
+                //   margin: EdgeInsets.only(
+                //       bottom:
+                //           getResponsiveHeight(context: context, height: 3)),
+                //   child: Row(
+                //     children: [
+                //       Expanded(
+                //           child: CustomButton(
+                //         text: "Update Email",
+                //         onPress: () {},
+                //       ))
+                //     ],
+                //   ),
+                // ),
+                // SizedBox(height: 10),
+                // Row(
+                //   children: [
+                //     Text('Update Email'),
+                //     CustomInput(
+                //       textt: TextInputType.emailAddress,
+                //       controller: updateUsernameController,
+                //       text: "New Username",
+                //       icon: Icons.lock,
+                //       secure: false,
+                //     ),
+                //   ],
+                // ),
+                // SizedBox(height: 10),
+                // Container(
+                //   margin: EdgeInsets.only(
+                //       bottom:
+                //           getResponsiveHeight(context: context, height: 3)),
+                //   child: Row(
+                //     children: [
+                //       Expanded(
+                //           child: CustomButton(
+                //         text: "Update Username",
+                //         onPress: () {},
+                //       ))
+                //     ],
+                //   ),
+                // ),
+                SizedBox(height: 10),
+                Text('Log out'),
+              ],
+            ))));
   }
 }
