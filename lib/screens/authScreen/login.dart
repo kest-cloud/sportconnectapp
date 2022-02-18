@@ -118,6 +118,8 @@ class _SignInScreenState extends State<SignInScreen> {
                           context,
                           MaterialPageRoute(builder: (context) => HomeScreen()),
                         );
+                      } else {
+                        SnackBar(content: Text("Register Number first"));
                       }
                     },
                   ))

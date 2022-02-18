@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use, unused_element
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, unused_element, unrelated_type_equality_checks
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -101,12 +101,13 @@ class _VerifyPhoneNumberScreenState extends State<VerifyPhoneNumberScreen> {
                               child: CustomButton(
                             text: "Verify Number",
                             onPress: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => HomeScreen(),
-                                ),
-                              );
+                              if (_pinPutController == _verificationCode) {
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HomeScreen()),
+                                    (route) => false);
+                              }
                             },
                           ))
                         ],
