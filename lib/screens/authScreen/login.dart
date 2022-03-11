@@ -74,19 +74,27 @@ class _SignInScreenState extends State<SignInScreen> {
                       final password = passwordController.text;
 
                       if (email.isEmpty) {
-                        SnackBar(content: Text("Please enter password"));
+                        const snackBar =
+                            SnackBar(content: Text("Please enter password"));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       } else {
                         if (password.isEmpty) {
-                          SnackBar(content: Text("Please enter password"));
+                          const snackBar =
+                              SnackBar(content: Text("Please enter password"));
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         } else if (firebaseUser != null) {
-                          SnackBar(content: Text("Signing in"));
+                          const snackBar =
+                              SnackBar(content: Text("Welcome Back"));
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           context.read<AuthenticationService>().signIn(
                                 email: email,
                                 password: password,
                               );
                         }
-                        SnackBar(content: Text("Welcome Back"));
+
                         Navigator.of(context).pushNamed('/home');
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text("Welcome Backk")));
                       }
                     },
                   ))
@@ -119,7 +127,9 @@ class _SignInScreenState extends State<SignInScreen> {
                           MaterialPageRoute(builder: (context) => HomeScreen()),
                         );
                       } else {
-                        SnackBar(content: Text("Register Number first"));
+                        const snackBar =
+                            SnackBar(content: Text("Register Number first"));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       }
                     },
                   ))
