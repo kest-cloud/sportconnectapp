@@ -1,3 +1,3 @@
 Release notes for Sportconectapp.
 
-Nothing much, ios has jsut decided to make thinsg a little complicated. but Its woking fine now.
+Nothing much, ios has just decided to make things a little complicated. but Its working fine now.
